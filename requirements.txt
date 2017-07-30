@@ -1,0 +1,7 @@
+# Flask 
+Flask==0.12.2
+
+# Flask extensions
+Flask-Script==2.0.5
+SQLAlchemy==1.2
+sqlalchemy-migrate==0.11.0
