@@ -9,9 +9,14 @@ from todoapp.models.task import Task
 # import controllers
 from todoapp.controllers.todo_controller import TodoController
 
+# import middlewares
+from todoapp.middlewares.authentication import token_required
+
+
 api = Blueprint('api', __name__)
 
 @api.route('/', methods=['GET'])
+@token_required 
 def api_index():
 	return 'index here'
 

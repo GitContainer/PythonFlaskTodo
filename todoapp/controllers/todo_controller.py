@@ -1,5 +1,3 @@
-from pprint import pprint
-
 from flask import request, jsonify
 
 # import parent class
@@ -28,4 +26,3 @@ class TodoController(BaseController):
 		db.session.add(todo)
 		db.session.commit()
 		return BaseController.send_response(todo.as_dict(), 'recorded successfully')
-		# return super(TodoController, TodoController).send_response(list(todo), 'record inserted successfully');

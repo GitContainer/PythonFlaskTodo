@@ -1,4 +1,6 @@
 from todoapp.models import db
+from todoapp.models.client import Client
+
 
 class Token(db.Model):
     __tablename__ = 'tokens'
