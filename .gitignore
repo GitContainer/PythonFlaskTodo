@@ -1,0 +1,7 @@
+# virtual environments
+env
+env*
+
+# database
+todo.db
+
