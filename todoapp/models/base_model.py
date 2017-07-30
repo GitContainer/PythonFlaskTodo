@@ -2,7 +2,7 @@ class BaseModel:
 	''' Base of all model class contains helper method to simplify jobs '''
 
 	'''
-	method to return model class as dict 
+	method to return model class as dict
 	'''
 	def as_dict(self):
 		''' return readable field if set, and all field otherwise '''

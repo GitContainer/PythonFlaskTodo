@@ -4,7 +4,7 @@ help:
 	@echo "  env         create a development environment using virtualenv"
 	@echo "  deps        install dependencies using pip"
 	@echo "  clean       remove unwanted files like .pyc's"
-	
+
 env:
 	# sudo pacman -S python-pip
 	# sudo pacman -S python-virtualenv 

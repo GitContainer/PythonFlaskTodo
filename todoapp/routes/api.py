@@ -17,7 +17,7 @@ def api_index():
 
 @api.route('/todos', methods=['GET'])
 def api_todos():
-	return jsonify({'todo': 'routes'})
+	return TodoController.index()
 
 @api.route('/todos', methods=['POST'])
 def create_todo():

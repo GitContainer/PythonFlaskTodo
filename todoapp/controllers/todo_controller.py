@@ -14,6 +14,14 @@ from todoapp.models.task import Task
 class TodoController(BaseController):
 
 	@staticmethod
+	def index():
+		tasks = Task.query.all()
+		result = []
+		for task in tasks:
+			result.append(task.as_dict())
+		return BaseController.send_response(result, 'todos retrieved successfully')
+
+	@staticmethod
 	def create(request):
 		payload = request.form['task']
 		todo = Task(payload)
