@@ -1,6 +1,7 @@
 # utils import
 import datetime
 import jwt
+import pprint
 
 from flask import request, jsonify
 
@@ -29,7 +30,7 @@ class UserAuthorizationController(BaseController):
 				jwt.encode() return string
 				but can't be pass to jsonify here
 				'''
-				return BaseController.send_response({'access_token': 'token'}, 'logged in successfully')
+				return BaseController.send_response({'access_token': str(token)}, 'logged in successfully')
 			else:
 				return BaseController.send_response(None, 'wrong credential')
 			# save token
@@ -46,7 +47,8 @@ class UserAuthorizationController(BaseController):
 		# prior checking user request body
 		if(first_name and last_name and email and username and password):
 			# create new user instance
-			user = User.new_user(first_name, last_name, email, username, password)
+			user = User(username, password)
+			user.new_user(first_name, last_name, email, username, password)
 			db.session.add(user)
 			db.session.commit()
 		else:
