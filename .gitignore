@@ -1,7 +1,11 @@
-# virtual environments
+*.pyc
+*.pyo
+*.swp
+*~
+
+# Installer logs
+pip-log.txt
+
+# Virtual environments
 env
 env*
-
-# database
-todo.db
-
